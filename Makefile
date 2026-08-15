@@ -1,6 +1,6 @@
 # API(Go)
 run-api:
-	go run apps/cmd/kosu
+	go run apps/api/cmd/kosu
 
 lint-write-api:
 	go fmt ./...
