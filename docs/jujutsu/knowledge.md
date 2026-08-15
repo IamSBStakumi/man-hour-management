@@ -76,8 +76,17 @@ jj bookmark create feature/xxxxx -r @-
 jj git push --bookmark feature/xxxxx
 ```
 
-## commit
+## commit & push
 
 ```bash
 jj commit filename -m "commit message"
+
+# コミットにbookmarkを関連付け
+jj bookmark create (bookmark name) -r @-
+
+# 残った変更をmain上へ戻し、PR対象から分離
+jj rebase -s @ -d main
+
+# bookmarkをpush
+jj git push --bookmark (bookmark name)
 ```
