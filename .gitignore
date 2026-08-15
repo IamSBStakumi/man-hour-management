@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# IDE - VSCode
+.vscode
+!.vscode/setting.json
+
+# misc
+/coverage
+yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Next.js
+.next
+out
+next-env.d.ts
+
+# Go
+go.work
