@@ -53,7 +53,7 @@ jj bookmark set main -r @
 # コミット以降は同様
 ```
 
-## 新規bookmarkの初回push
+### 新規bookmarkの初回push
 
 新規作成したbookmarkは、通常の`jj git push`ではpush対象にならない。
 初回pushでは、対象のbookmarkを明示する。
@@ -63,3 +63,15 @@ jj git push --bookmark main
 ```
 
 `--bookmark`で指定したbookmarkが未追跡の場合、push後に自動的に追跡される。
+
+## branch
+
+jjでは`bookmark`がgitのブランチに相当するものである。
+
+```bash
+# 作業bookmarkを作成
+jj bookmark create feature/xxxxx -r @-
+
+# GitHubへpush
+jj git push --bookmark feature/xxxxx
+```

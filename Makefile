@@ -7,7 +7,10 @@ lint-write-api:
 	go vet ./...
 
 # Jujutsu
-.PHONY: jj-commit jj-push
+.PHONY: jj-bookmark jj-commit jj-push
+
+jj-bookmark:
+	jj bookmark create $(bm)
 
 jj-commit:
 	@test -n "$(m)" || (echo 'Usage: make jj-commit MESSAGE="commit message"' && exit 1)
