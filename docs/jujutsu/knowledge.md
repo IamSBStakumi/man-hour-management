@@ -75,3 +75,9 @@ jj bookmark create feature/xxxxx -r @-
 # GitHubへpush
 jj git push --bookmark feature/xxxxx
 ```
+
+## commit
+
+```bash
+jj commit filename -m "commit message"
+```
